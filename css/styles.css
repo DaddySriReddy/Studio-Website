@@ -1,0 +1,512 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a i {
+    margin-right: 8px;
+}
+
+nav ul li a:hover {
+    color: #e67e22;
+}
+
+#hero {
+    background: url('../images/hero.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 3rem;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.cta {
+    background: #e67e22;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    animation: textFadeIn 2s ease forwards;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    animation: textFadeIn 2s ease forwards;
+    transition: color 0.3s ease;
+}
+
+footer p:hover {
+    color: #e67e22;
+}
+
+/* Live background animation for the hero section */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#hero {
+    background: linear-gradient(270deg, #ff7e5f, #feb47b);
+    background-size: 400% 400%;
+    animation: backgroundAnimation 15s ease infinite;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Text animation in the hero section */
+@keyframes textFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#hero h1 {
+    font-size: 3rem;
+    animation: textFadeIn 2s ease forwards;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    animation: textFadeIn 2.5s ease forwards;
+}
+
+.cta {
+    background: #e67e22;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    animation: textFadeIn 3s ease forwards;
+    transition: background 0.3s ease;
+}
+
+.cta:hover {
+    background: #d35400;
+}
+
+#cartoon-photographer {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    animation: bounce 5s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+
+/* Portfolio (Work Page) */
+#portfolio {
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
+}
+
+#portfolio h1 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+/* About Us Page */
+#about-us {
+    padding: 50px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+#about-us h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover img {
+    transform: scale(1.1);
+}
+
+.team-member h2 {
+    font-size: 1.8rem;
+    color: #555;
+}
+
+.team-member p {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: #555;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #e67e22;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Pricing Page Enhancements */
+#pricing {
+    padding: 50px;
+    text-align: center;
+    background-color: #f9f9f9;
+    background: url('../Images/capturing-moments.jpg') no-repeat center center/cover;
+    background-size: cover;
+    color: #fff;
+}
+
+#pricing h1 {
+    margin-bottom: 40px;
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 2s ease;
+}
+
+.pricing-table {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+    backdrop-filter: blur(10px);
+}
+
+.pricing-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.pricing-card h2 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+    color: #333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card p {
+    margin-bottom: 20px;
+    color: #777;
+}
+
+.pricing-card strong {
+    font-size: 2.5rem;
+    color: #e67e22;
+}
+
+.pricing-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.pricing-card ul li {
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 30px;
+}
+
+/* Adding Icons to the Pricing List Items */
+.pricing-card ul li::before {
+    content: url('../images/icon-checkmark.svg'); /* Use a relevant icon here */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+/* Contact Page */
+#contact {
+    padding: 50px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+#contact h1 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+#contact p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #555;
+}
+
+
+
+
+/* Base Styles - Already added earlier */
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 768px) {
+    /* Adjust the navigation for smaller screens */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    /* Adjust the hero section */
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Adjust gallery columns */
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Adjust pricing cards for mobile view */
+    .pricing-table {
+        flex-direction: column;
+    }
+
+    .pricing-card {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Adjust form layout */
+    #contact-form {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    /* Gallery adjustments */
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    /* Pricing and contact form adjustments */
+    .pricing-card, #contact-form {
+        padding: 10px;
+    }
+}
+
+
+/*Smooth Scrolling*/
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Simple Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Apply the fade-in effect to specific sections */
+#about, .gallery-item, .pricing-card, #contact {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
